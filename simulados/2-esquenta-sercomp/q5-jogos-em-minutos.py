@@ -8,17 +8,17 @@ horas = h_final - h_inicial
 minutos = min_final - min_inicial
 
 max_horas = 24
-min_min = 1
-max_min = 60
+min_minuto = 1
+max_minuto = 60
 
 if (minutos < 0):
     horas = horas + minutos
-    minutos = (minutos * -1) * max_min + minutos
+    minutos = (minutos * -1) * max_minuto + minutos
 
-if (minutos > max_min):
+if (minutos > max_minuto):
     aux = minutos
-    minutos = minutos - ((minutos//max_min) * max_min)
-    horas = horas + aux//max_min
+    minutos = minutos - ((minutos//max_minuto) * max_minuto)
+    horas = horas + aux//max_minuto
 
 if (horas == 0 and minutos == 0):
     horas = max_horas
