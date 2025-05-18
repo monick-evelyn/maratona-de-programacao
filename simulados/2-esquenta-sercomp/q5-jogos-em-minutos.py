@@ -1,9 +1,24 @@
-h_inicial, min_inicial, h_final, min_final = input().split(" ")
-h_inicial = int(h_inicial)
-h_final = int(h_final)
-min_inicial = int(min_inicial)
-min_final = int(min_final)
+h_inicial, min_inicial, h_final, min_final = map(int, input().split())
 
+# Converte hora e minuto de início/fim para minutos totais
+inicio = h_inicial * 60 + min_inicial
+fim = h_final * 60 + min_final
+
+# Se o tempo final for menor ou igual ao inicial, 
+# o jogo passou da meia-noite
+if fim <= inicio:
+    fim += 24 * 60  # adiciona 24 horas em minutos
+
+# Duração total em minutos
+duracao_total = fim - inicio
+
+# Converte para horas e minutos
+horas = duracao_total // 60
+minutos = duracao_total % 60
+
+# Exibe o resultado
+print(f"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)")
+'''
 horas = h_final - h_inicial
 minutos = min_final - min_inicial
 
@@ -26,3 +41,4 @@ if (horas == 0 and minutos == 0):
 if (horas < 0):
     horas = max_horas + horas
 print(f"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)")
+'''
