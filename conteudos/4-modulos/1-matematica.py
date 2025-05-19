@@ -1,9 +1,9 @@
 import math
 
-num = int(input())
+num = float(input())
 print(math.ceil(num)) #arredonda em int pra cima
 print(math.floor(num))#arredonda em int pra baixo
-print(math.trunc(num))
-print(math.pow(num))
+print(f"TRUNC: {math.trunc(num)}")
 print(math.sqrt(num)) #raiz quadrada
-print(math.factorial(num)) #fatorial
+print(math.factorial(math.ceil(num))) #fatorial
+print(math.pow(num, 2))
